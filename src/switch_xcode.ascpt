@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+on run argv
+  set arg to item 1 of argv
+  set cmd to "xcode-select --switch " & arg
+  do shell script cmd with administrator privileges
+end run
