@@ -2,16 +2,6 @@
 
 on run argv
   set arg to item 1 of argv
-
-  set cmd to "pluginkit -r /Applications/XCommentWrap.app/Contents/PlugIns/XCommentWrap-extension.appex"
-  do shell script cmd
-
   set cmd to "xcode-select --switch " & arg
   do shell script cmd with administrator privileges
-
-  set cmd to "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f " & arg
-  do shell script cmd
-
-  set cmd to "pluginkit -e use -i com.mikeash.XCommentWrap.XCommentWrap-extension"
-  do shell script cmd
 end run
